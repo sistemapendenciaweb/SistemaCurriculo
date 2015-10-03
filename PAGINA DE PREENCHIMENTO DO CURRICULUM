@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h= "http://xmlns.jcp.org/jsf/html"
+      xmlns:p= "http://primefaces.org/ui" 
+      xmlns:f= "http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> CURRICULUM WEB </title>
+
+    </h:head>
+    <h:body style=" background-color: gainsboro;"> <br/><br/>
+
+
+        <center>
+            <p:outputLabel style=" font:normal,bolder; font-size: 50px;color: red;  " value="CADASTRE SEU CURRÍCULUM" />    
+        </center><br/><br/>
+
+
+        <p:panel style=" background-color: blue; width: 1338px; height: 30px;" >
+            <center>
+                <p:outputLabel style=" font:normal,bolder; font-size: 20px;color: white;  " value="Envie Seu Currículum de Maneira Facilitada Através do Nosso Sistema!" />
+            </center>   
+
+        </p:panel> <br/>
+        <center>
+            <p:link value=" Clique Aqui Para Instruções de Preenchimento " style="font:normal,bolder; font-size: 15px;color: cornflowerblue; "/>
+        </center> <br/>   
+
+
+
+
+        <form style=" width:800px; height:300px; ">
+
+            <fieldset style="  margin-left:385px; ">
+                <legend align="justify"  style="font-weight: bolder; ">RESUMO PROFFISIONAL</legend>
+
+                <p:inputTextarea style=" width:540px; height:50px; font-size: 12px;" rows="5" cols="30" counter="display" maxlength="256" counterTemplate="Obs.: {0} Caracteres Restantes." autoResize="false" /> <br/>
+                <h:outputText id="display" />
+
+
+            </fieldset> <br/>
+            <fieldset style="  margin-left:385px; ">
+                <legend align="justify"  style="font-weight: bolder; ">DADOS PESSOAIS</legend>
+                <h:panelGrid columns="1" cellpadding="2" >
+                    <h:outputText value="Nome " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <p:inputText id="nome" style= "width:532px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <h:outputText value="Endereço " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+
+                    <p:inputText id="nome" style= "width:532px;height:12px;color: black;font-family: arial;font-size: 12px;"/> 
+                </h:panelGrid>
+                <h:panelGrid columns="4" cellpadding="4" >
+                    <h:outputText value="Cidade " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Uf" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <h:outputText value="Telefone " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Telefone Secundário" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <p:selectOneMenu id="cidade" value="#{selectOneMenuView.console}" style="width:200px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu> 
+                    <p:selectOneMenu id="uf" value="#{selectOneMenuView.console}" style="width:50px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu>                                          
+
+                    <p:inputText id="telefone" style= "width:118px;height:12px;color: black;font-family: arial;font-size: 12px;"/> 
+
+                    <p:inputText id="telefone" style= "width:118px;height:12px;color: black;font-family: arial;font-size: 12px;"/>     
+
+
+                </h:panelGrid>
+
+                <h:panelGrid columns="1" cellpadding="2" >
+                    <h:outputText value="E-mail " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <p:inputText id="nome" style= "width:534px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <h:outputText value="E-mail Secundário " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+
+                    <p:inputText id="nome" style= "width:534px;height:12px;color: black;font-family: arial;font-size: 12px;"/> 
+                </h:panelGrid>
+
+
+
+            </fieldset> <br/>
+
+            <fieldset style="  margin-left:385px; ">
+                <legend align="justify"  style="font-weight: bolder; ">FORMAÇÃO ACADÊMICA</legend>
+                <h:panelGrid columns="4" cellpadding="4" >
+                    <h:outputText value="Formação " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Ano de Conclusão" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <h:outputText value="Formação Secundária " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Ano de Conclusão" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <p:selectOneMenu id="formacao" value="#{selectOneMenuView.console}" style="width:180px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu> 
+                    <p:selectOneMenu id="anodeconclusao" value="#{selectOneMenuView.console}" style="width:71px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu>  
+                    <p:selectOneMenu id="formacao2" value="#{selectOneMenuView.console}" style="width:180px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu> 
+                    <p:selectOneMenu id="anodeconclusaos" value="#{selectOneMenuView.console}" style="width:71px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu> 
+
+
+
+
+                </h:panelGrid>
+                <h:panelGrid columns="2" cellpadding="4" >
+                    <h:outputText value="Titulação " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Titulação Secundária" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:selectOneMenu id="titulacao" value="#{selectOneMenuView.console}" style="width:262px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu> 
+                    <p:selectOneMenu id="titulacao2" value="#{selectOneMenuView.console}" style="width:262px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                        <f:selectItem itemLabel="" itemValue="" />
+
+                    </p:selectOneMenu> 
+
+                    <h:outputText value="Curso " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Curso Secundário" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:inputText id="curso" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <p:inputText id="curso2" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <h:outputText value="Instutuição" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Instituição Secundária" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:inputText id="instituicao" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <p:inputText id="instituicao2" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                </h:panelGrid>
+
+
+
+            </fieldset> <br/>
+            
+            
+            <fieldset style="  margin-left:385px; ">
+                <legend align="justify"  style="font-weight: bolder; ">EXPERIÊNCIA PROFISSIONAL</legend>
+                <h:panelGrid columns="1" cellpadding="2" >
+                    <h:outputText value="Empresa " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <p:inputText id="experienciaproffisional" style= "width:534px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <h:outputText value="Principais Atividades " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:inputTextarea style=" width:534px; height:50px; font-size: 12px;" rows="5" cols="30" counter="tela1" maxlength="256" counterTemplate="Obs.: {0} Caracteres Restantes" autoResize="false" /> 
+                    <h:outputText id="tela1" />    
+                    <h:outputText value="Empresa Secundária " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <p:inputText id="experienciaproffisional" style= "width:534px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <h:outputText value="Principais Atividades  " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:inputTextarea style=" width:534px; height:50px; font-size: 12px;" rows="5" cols="30" counter="tela" maxlength="256" counterTemplate="Obs.: {0} Caracteres Restantes" autoResize="false" /> 
+                    <h:outputText id="tela" />     
+                </h:panelGrid>
+
+
+
+            </fieldset> <br/>
+
+            
+            <fieldset style="  margin-left:385px; ">
+                <legend align="justify"  style="font-weight: bolder; ">CURSOS</legend>
+                <h:panelGrid columns="2" cellpadding="4" > 
+                    <h:outputText value="Curso " style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Curso Secundário" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:inputText id="curso" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <p:inputText id="curso2" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <h:outputText value="Instutuição" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/> 
+                    <h:outputText value="Instituição Secundária" style= "font-size: 12px;font-weight: bold;color: black;font-family: arial"/>
+                    <p:inputText id="instituicao" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                    <p:inputText id="instituicao2" style= "width:256px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+                 
+                </h:panelGrid>
+           
+              </fieldset> <br/>
+             
+             <h:panelGrid style=" margin-left: 550px;" columns="" cellpadding="1" >
+               <p:commandButton   value="Enviar"  id="botao"  style= "width:240px;height:50px;font-weight: bold;font-size: 16px;text-align: center; background-color: orange; color: black;  "/> 
+                
+           
+             </h:panelGrid>
+            
+        </form>
+    </h:body>
+</html>
