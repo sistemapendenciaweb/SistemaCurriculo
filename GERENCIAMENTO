@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h= "http://xmlns.jcp.org/jsf/html"
+      xmlns:p= "http://primefaces.org/ui" 
+      xmlns:f= "http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>SISTEMA DE GERENCIAMENTO</title>
+
+    </h:head>
+    <h:body style=" background-color: gainsboro;"> <br/><br/>
+
+        <center>
+            <p:outputLabel style=" font:normal,bolder; font-size: 50px;color: red;  " value="SISTEMA DE GERENCIAMENTO" />    
+        </center><br/>
+
+        <h:panelGrid style=" width: 1336px;" columns="3" cellpadding="" >
+            <p:commandButton   value="Enviar"  id="botaoenviar"  style= "width:120px;height:25px;font-weight: bold;font-size: 16px;text-align: center; background-color: orange; color: black;"/>
+            <p:commandButton   value="Cadastro Usuário"  id="botaoenviar"  style= "width:180px;height:25px;font-weight: bold;font-size: 16px;text-align: center; background-color: orange; color: black;margin-left: 10px;"/> 
+            <p:commandButton  value="Sair"  id="botaosair"  style= "width:120px;height:25px;font-weight: bold;font-size: 16px;text-align: center; background-color: orange; color: black; margin-left: 900px;"/> <br/>
+
+        </h:panelGrid>
+        <p:panel style=" background-color: blue; width: 1336px; height: 1px;"><br/>
+        </p:panel>
+        <h:panelGrid columns="4" cellpadding="4" >
+            <p:selectOneMenu id="formacao3" value="#{selectOneMenuView.console}" style="width:240px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                <f:selectItem itemLabel="Formação" itemValue="" />
+
+            </p:selectOneMenu> 
+            <p:selectOneMenu id="experiencia" value="#{selectOneMenuView.console}" style="width:240px;font-size: 12px;font-weight: bold;color: black;font-family: arial; ">
+                <f:selectItem itemLabel="Experiencia" itemValue="" />
+
+            </p:selectOneMenu>   
+            <p:inputText id="pesquisa" style= "width:240px;height:12px;color: black;font-family: arial;font-size: 12px;"/>
+            <p:commandButton   value="Buscar"  id="botaoenviar"  style= "width:120px;height:25px;font-weight: bold;font-size: 16px;text-align: center; background-color: orange; color: black;"/>
+        </h:panelGrid>    
+        <h:panelGrid columns="2" cellpadding="4" >
+            <p:dataTable var="lista" value="#" style=" width: 883px; max-height:800px; position:  absolute;">
+                <p:column headerText="">
+                    <h:outputText value="#"/>
+                </p:column>
+
+                <p:column headerText="Nome" style=" font:bold; color: black; "  >
+                    <h:outputText value="#"/>
+                </p:column>
+                <p:column headerText="Formação" style="  font:bold; color: black; " >
+                    <h:outputText value="#" />
+                </p:column>
+
+                <p:column headerText="Experiência" style="  font:bold; color: black; " >
+                    <h:outputText value="#" />
+                </p:column>
+                <p:column headerText="Cursos" style="  font:bold; color: black; " >
+                    <h:outputText value="#"/>
+                </p:column>
+            </p:dataTable>
+            <p:panel style=" background-color: white; width: 200px; height: 200px; margin-left: 1118px; position: absolute; " >
+                <p:panel style=" background-color:gainsboro ; width: 160px; height: 35px; position: absolute; " >
+
+                    <p:outputLabel style=" font:normal,bolder; font-size: 14px;color: black;   " value="Botões de Controle" />
+                </p:panel>
+            </p:panel> <br/> 
+
+        </h:panelGrid>
+
+
+    </h:body>
+</html>
